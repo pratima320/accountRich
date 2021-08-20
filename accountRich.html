@@ -1,0 +1,27 @@
+<template>
+
+    
+    <lightning-record-edit-form 
+            object-api-name={objectApiName} 
+            record-id={recordId}
+            onsubmit={handleSubmit}>
+       <lightning-input label="Type"
+                name="type"
+                value={type}
+                onchange={handleChange}
+                class="slds-m-bottom_x-small"></lightning-input>
+        <lightning-input-rich-text label="Name" 
+                value={richfield}
+                name="richfield" 
+                onchange={handleChange}
+                class="slds-m-bottom_x-small nameInput"></lightning-input-rich-text>
+        
+
+        <lightning-button class="slds-m-top_small"
+                 type="submit"
+                 label="Update Account Name">
+        </lightning-button>
+    </lightning-record-edit-form>
+    {nameCount}
+    
+</template>
